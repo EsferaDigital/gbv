@@ -24,7 +24,7 @@ const scrollNav = () =>{
     const targetId = e.currentTarget.getAttribute("href")
     const targetPosition = document.querySelector(targetId).offsetTop
     const startPosition = window.pageYOffset
-    const distance = targetPosition - startPosition - 80
+    const distance = targetPosition - startPosition //- 80
     const duration = 1000
     let start = null
 
@@ -45,5 +45,30 @@ const scrollNav = () =>{
   }
 }
 
+const toggleHeader = () =>{
+  const h = document.getElementById('Header')
+  let lastScrollTop = 0;
+  // al hacer scroll aumenta el valor de sctop
+  let sctop = document.documentElement.scrollTop
+  let st = window.pageYOffset || document.documentElement.scrollTop
 
-export {toggleNav, scrollNav};
+  if(st > lastScrollTop){
+    h.classList.remove('slide-down')
+    h.classList.add('slide-up')
+  }else if(sctop === 0){
+    h.classList.remove('slide-up')
+    h.classList.add('slide-down')
+  }
+
+  lastScrollTop = st
+
+}
+
+const animaHeader = () =>{window.addEventListener('scroll', toggleHeader, false)}
+
+
+export {
+  toggleNav,
+  scrollNav,
+  animaHeader,
+}
