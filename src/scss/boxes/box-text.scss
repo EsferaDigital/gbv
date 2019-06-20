@@ -1,0 +1,9 @@
+.Box-text{
+  display: grid;
+  align-items: center; //vertical
+  justify-items: center; // horizontal
+  padding: 1rem;
+  margin: auto;
+  width: var(--main-maximo);
+  max-width: $ancho-maximo;
+}
