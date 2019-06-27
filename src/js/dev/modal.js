@@ -28,7 +28,7 @@ const modalForm = () =>{
 
   const Form = `
       <table border=0 cellspacing=0 cellpadding=0 class="scroll-iframe">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchS7ijK4Kh_jN3BZliG6wUS39kRFNyqgolHuZPBzVU1f-pJQ/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTbLLosuyymQVA4MLeLB8BrWEqVSUaz_m9pYvc7izFSCcpKw/viewform?embedded=true" width="640" height="1836" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
       </table>`
   b.addEventListener('click', () =>{
     printModal(`${Form}`)

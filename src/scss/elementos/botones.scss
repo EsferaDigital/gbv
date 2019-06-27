@@ -36,3 +36,17 @@
   background-color: color(primary);
   color: white;
 }
+
+.Btn-cta{
+  background-color: color(cta);
+  border: none;
+  color: white;
+  padding: .5rem 1rem;
+  letter-spacing: $espacio-entre-letras;
+  &:hover{
+    background-color: darken(color(cta),5);
+  }
+  &:active{
+    transform: scale(.95);
+  }
+}
