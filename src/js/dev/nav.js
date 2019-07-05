@@ -13,12 +13,17 @@ const toggleNav = () =>{
 }
 
 const scrollNav = () =>{
-  const itemLinks = document.querySelectorAll(".Menu-link")
+  const d = document,
+  panel = d.querySelector('.Panel'),
+  panelBtn = d.querySelector('.Panel-btn')
+  const itemLinks = d.querySelectorAll(".Menu-link")
 
   itemLinks.forEach(elem => elem.addEventListener('click', navBarClick))
 
   function navBarClick(e){
     smoothScroll(e);
+    panelBtn.classList.toggle('is-active')
+    panel.classList.toggle('is-active')
   }
 }
 

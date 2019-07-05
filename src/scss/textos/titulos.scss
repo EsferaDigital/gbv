@@ -6,12 +6,16 @@
   font-size:var(--font-size-titulo);
   padding: var(--padding-titulo);
   letter-spacing: $espacio-entre-letras;
+  font-weight: 400;
+  padding: 1rem 0;
 }
 
 @mixin sub-titulo($font-color){
   color: $font-color;
   font-size: var(--font-size-subtitulo);
   letter-spacing: $espacio-entre-letras;
+  font-weight: 400;
+  padding: 1rem 0;
 }
 
 // Los titulos son para los h1
@@ -19,6 +23,11 @@
   @include titulo(white);
 }
 
-.Subtitulo{
+.Sub-titulo{
   @include sub-titulo(white);
+}
+
+.Slogan{
+  @include sub-titulo(color(secondary));
+  font-size: var(--font-size-slogan);
 }

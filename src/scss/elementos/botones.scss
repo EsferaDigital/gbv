@@ -31,10 +31,21 @@
   display: none;
   position: fixed;
   padding: 1rem 1.2rem;
-  bottom: 2rem;
+  bottom: 10rem;
   right: 1rem;
+  z-index: capa(capa10);
   background-color: color(primary);
   color: white;
+  cursor: pointer;
+  transition: background-color .3s;
+  outline: none;
+  border: none;
+  &:hover{
+    background-color: rgba(9, 10, 7, 0.6);
+  }
+  & i{
+    font-size: var(--size-icon);
+  }
 }
 
 .Btn-cta{

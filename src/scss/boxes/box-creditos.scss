@@ -7,4 +7,7 @@
   font-family: $fuente-secundaria;
   color: color(bg);
   font-weight: 400;
+  & p{
+    letter-spacing: 0;
+  }
 }

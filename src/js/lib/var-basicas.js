@@ -1,4 +1,6 @@
 const Ano = new Date().getFullYear()
+const mq768 = window.matchMedia('(min-width: 768px)')
+const mq1024 = window.matchMedia('(min-width: 1024px)')
 
 function easeInOutCubic(t,b,c,d){
   t /= d/2
@@ -80,5 +82,6 @@ export {
   Ano,
   smoothScroll,
   Up,
-  createCustomElement
+  createCustomElement,
+  mq768
 }
