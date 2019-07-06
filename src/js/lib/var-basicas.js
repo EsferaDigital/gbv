@@ -74,10 +74,6 @@ const createCustomElement = (element, attributes, children) =>{
   return customElement
 }
 
-
-
-
-
 export {
   Ano,
   smoothScroll,
