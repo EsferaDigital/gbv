@@ -1,3 +1,5 @@
+//Esto se puede mejorar metiendo las variables del DOM en un archivo aparte y luego importandolas acá.
+
 import {smoothScroll, Up} from '../lib/var-basicas'
 
 const toggleNav = () =>{
@@ -57,7 +59,17 @@ const showButton = () =>{
   }
 }
 
+const bgColorHeader = () =>{
+  const h = document.getElementById('Header')
+  if(window.pageYOffset > 0){
+    h.style.backgroundColor = "#1F5764";
+  }else{
+    h.style.backgroundColor = "transparent"
+  }
+}
+
 const animaHeader = () =>{window.addEventListener('scroll', toggleHeader, false)}
+const colorHeader = () =>{window.addEventListener('scroll', bgColorHeader)}
 
 const showButtonUp = () =>{window.addEventListener('scroll', showButton )}
 const upToTop = () =>{
@@ -70,6 +82,7 @@ export {
   toggleNav,
   scrollNav,
   animaHeader,
+  colorHeader,
   showButtonUp,
   upToTop
 }
