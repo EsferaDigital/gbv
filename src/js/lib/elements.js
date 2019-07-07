@@ -7,10 +7,15 @@ const createModal = content =>{
   }, [content])
   const modalContainerEl = createCustomElement('div',{
     id: 'Modal-container',
-    class: 'Modal'
+    class: 'Modal zoom-in'
   }, [modalContentEl])
   document.body.appendChild(modalContainerEl)
-  const removeModal = () => document.body.removeChild(modalContainerEl)
+  const removeModal = () => {
+    modalContainerEl.classList.replace('zoom-in', 'zoom-out')
+    modalContainerEl.addEventListener('animationend', () =>{
+      document.body.removeChild(modalContainerEl)
+    })
+  }
   modalContainerEl.addEventListener('click', e =>{
     if(e.target === modalContainerEl) removeModal()
   })

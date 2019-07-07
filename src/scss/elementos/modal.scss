@@ -7,7 +7,11 @@
   height: 100vh;
   background-color: $fondo-transparente;
   &:before{
-    content: "x";
+    content: "\02715";
+    // font-family: FontAwsome;
+    font-style: normal;
+    font-weight: normal;
+    // text-decoration: inherit;
     color: white;
     position: absolute;
     top: .5rem;
@@ -17,14 +21,98 @@
   }
   &-item{
     width: 92%;
-    max-width: 1400px; //(mejorar)usar variable
+    max-width: $ancho-maximo;
     height: 85vh;
     margin: auto;
-    background-color: azure;
+    background-color: color(bg);
     & iframe{
       width: 100%;
       height: 100%;
     }
+  }
+  &.zoom-in{
+    animation: zoomIn .5s forwards;
+    @keyframes zoomIn{
+      from{
+        transform: scale3d(0,0,0);
+      }
+      to{
+        transform: scale3d(1,1,1);
+      }
+    }
+  }
+  &.zoom-out{
+    animation: zoomOut .5s forwards;
+    @keyframes zoomOut{
+      from{
+        transform: scale3d(1,1,1);
+      }
+      to{
+        transform: scale3d(0,0,0);
+      }
+    }
+  }
+}
+
+.ModalH{
+  position: fixed;
+  display: flex;
+  top: 0;
+  z-index: capa(capa10);
+  width: 100%;
+  height: 100vh;
+  background-color: $fondo-transparente;
+  transform: scale3d(0,0,0);
+  &-item{
+    width: 92%;
+    max-width: $ancho-maximo;
+    height: 85vh;
+    margin: auto;
+    background-color: color(bg);
+    overflow-y: scroll;
+    & .Box-text:nth-child(1){
+      width: 100%;
+      background-color: color(secondary);
+    }
+    & .Box-text:nth-child(2){
+      padding: 2rem;
+      & p{
+        color: color(shark);
+        padding: .7rem 0;
+      }
+    }
+  }
+  &.zoom-out{
+    animation: zoomOut .5s forwards;
+    @keyframes zoomOut{
+      to{
+        transform: scale3d(0,0,0);
+      }
+    }
+  }
+  &.zoom-in{
+    animation: zoomIn .5s forwards;
+    @keyframes zoomIn{
+      from{
+        transform: scale3d(0,0,0);
+      }
+      to{
+        transform: scale3d(1,1,1);
+      }
+    }
+  }
+}
+
+#closeModal{
+  position: absolute;
+  top: .7rem;
+  right: .5rem;
+  color: color(bg);
+  outline: none;
+  border: none;
+  background-color: transparent;
+  & i{
+    font-size: 2rem;
   }
 }
 
