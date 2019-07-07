@@ -82,22 +82,22 @@
       }
     }
   }
-  &.zoom-out{
-    animation: zoomOut .5s forwards;
-    @keyframes zoomOut{
+  &.zoomin{
+    animation: zoomin .5s forwards;
+    @keyframes zoomin{
       to{
-        transform: scale3d(0,0,0);
+        transform: scale3d(1,1,1);
       }
     }
   }
-  &.zoom-in{
-    animation: zoomIn .5s forwards;
-    @keyframes zoomIn{
+  &.zoomout{
+    animation: zoomout .5s forwards;
+    @keyframes zoomout{
       from{
-        transform: scale3d(0,0,0);
+        transform: scale3d(1,1,1);
       }
       to{
-        transform: scale3d(1,1,1);
+        transform: scale3d(0,0,0);
       }
     }
   }
