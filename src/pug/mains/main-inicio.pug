@@ -20,7 +20,7 @@ main.Main
     .Box-text
       .Card-text
         h3.Titulo-3 Buscamos vehículos robados
-        p.Parrafo compartimos la información que ustedes nos entregan de los vehículos que han sido robados y, aprovechando la red de voluntarios que circulan en sus propios vehículos por la ciudad, avisan a las autoridades cuando encuentran un auto robado.
+        p.Parrafo Compartimos la información que ustedes nos entregan de los vehículos que han sido robados y, aprovechando la red de voluntarios que circulan en sus propios vehículos por la ciudad, detenemos y damos aviso a las autoridades cuando encuentramos un auto robado.
       .Card-text
         h3.Titulo-3 Tiene costo?
         p.Parrafo No, es un trabajo voluntario realizado por personas que alguna vez fueron víctimas de robo o que, sencillamente, buscan cooperar en la búsqueda de los autos que han sido robados porque están cansados de que nos gane la delincuencia.
@@ -29,13 +29,13 @@ main.Main
         p.Parrafo Contamos con más de 400 integrantes que ayudan a la organización de manera voluntaria. Principalmente se dedican a recorrer las calles con la información de los autos que han sido robados y, al encontrarlos, se da aviso a las autoridades policiales para que recuperen tu auto.
       .Card-text
         h3.Titulo-3 Es legal lo que hacemos?
-        p.Parrafo Si, es completamente legal, somos una ONG que auxilia a las víctimas voluntariamente operando dentro del marco de la ley con las facultades de todo ciudadano para retener a un delincuentre frente a un delito flagrante para llamar a las autoridades cuando el riesgo es mayor.
+        p.Parrafo Si, es completamente legal, somos una ONG que auxilia a las víctimas voluntariamente operando dentro del marco de la ley con las facultades de todo ciudadano para retener a un delincuente frente a un delito flagrante para llamar a las autoridades cuando el riesgo es mayor.
   section.Sumate#sumate
     .Box-text
       h2.Titulo-2 Súmate
     .Box-text
       .Card-text
-        p.Parrafo Si quieres ser parte de la red de ayuda del Grupo Búsqueda de Vehículos, como víctima, como colaborador o solamente participar como integrante de alguna institución, sólo llena nuestro formulario que se encuentra más abajo. Lo anterior es para mantener como organización la cantidad de personas a nivel de país que se encuentran participando, además nos permitirá mantener un sistema de filtros debido a la información sensible que se maneja como ONG de ayuda a las víctima del delito de robo de vehículo.
+        p.Parrafo Si quieres ser parte de la red de ayuda del Grupo Búsqueda de Vehículos, como víctima, como colaborador o solamente participar como integrante de alguna institución, llena nuestro formulario que se encuentra más abajo. Lo anterior es para mantener un registro de la cantidad de personas a nivel nacional que se encuentran participando, además nos permitirá mantener un sistema de filtros debido a la información sensible que se maneja como ONG de ayuda a las víctima del delito de robo de vehículo.
         p.Parrafo Esperamos tu comprensión y te recordamos que es importante llenar los campos solicitados dentro del formulario, si eres víctima y tienes un auto para reportarnos, en el mismo formulario te damos la opción de incorporarlo.
         p.Parrafo Una vez recepcionada la información se realizará una revisión de los antecedentes y se te informará sobre tu ingreso, en el caso de existir problemas también se te avisara el motivo por el cual no puedes ingresar.
     .Box-text
@@ -51,5 +51,11 @@ main.Main
       .Card-text
         h3.Titulo-3 Apóyanos
         p.Parrafo Recibimos donaciones en nuestra cuenta del Banco Estado
-        span.Parrafo Número: 23571897385
+        p.Parrafo Número: 23571897385
+        p.Parrafo O a través de PayPal
+        form(action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top")
+          input(type="hidden" name="cmd" value="_s-xclick")
+          input(type="hidden" name="hosted_button_id" value="KL25PV4QN2REY")
+          input(type="image" src="img/boton-paypal.png" border="none" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button")
+          img(alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1")
 include ../elements/modal-historia

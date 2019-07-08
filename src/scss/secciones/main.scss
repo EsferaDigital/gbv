@@ -144,6 +144,20 @@
         display: block;
         margin-bottom: 2rem;
       }
+      & form{
+        // border: 1px solid red;
+        & > input{
+          border: none;
+          outline: none;
+          &:active{
+            transform: scale(.95);
+            outline: none;
+          }
+        }
+        & > input:focus{
+          outline: none;
+        }
+      }
     }
   }
 }
